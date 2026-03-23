@@ -119,4 +119,4 @@ python select_window.py
 - 외부 API(기상/도로)와 지도 표시를 사용하므로 네트워크 상태에 따라 일부 UI는 갱신 지연이 발생할 수 있습니다.
 
 ## 10. 라이선스
-- 소스 헤더 기준: **GNU General Public License v3.0 or later**
+- **GNU General Public License v3.0 or later**
