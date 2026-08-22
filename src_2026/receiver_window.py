@@ -90,12 +90,12 @@ HTML_FILE_PATH = './resource/Tmap.html'
 
 # Bad Condition Data Variable
 WEATHER_API_URL = 'http://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getUltraSrtNcst'
-WEATHER_API_SERVICE_KEY = 'QEPmvbFk9szqqPD8q9+s2ezoOOoY7VcAt4Rt1QPseyZ5LQucie5H9OjnJj/GO4H1I41QrmGWQxhCF9FGp42ZQA=='
+WEATHER_API_SERVICE_KEY = os.environ.get('WEATHER_API_SERVICE_KEY', '')
 WEATHER_CONDITION_WAIT_TIMER = 5
 WEATHER_CONDITION_ERROR_RESEND_TIMER = 10
 WEATHER_CONDITION_RESEND_TIMER = 600
 ROAD_API_URL = 'https://apis.openapi.sk.com/tmap/traffic'
-ROAD_API_SERVICE_KEY = 'fOsIyENUEf8ArejvlqGDU4p66eOsMRjB5kII22do'
+ROAD_API_SERVICE_KEY = os.environ.get('TMAP_API_KEY', '')
 ROAD_CONDITION_WAIT_TIMER = 5
 ROAD_CONDITION_RESEND_TIMER = 600 # Receive traffic data per 10 minute
 
@@ -1447,7 +1447,11 @@ class NavigationWindow(QWidget):
         self.road_label = QLabel()
         self.road_label.setAlignment(Qt.AlignCenter)
         webView = QWebEngineView()
-        webView.load(QUrl.fromLocalFile(resource_path(HTML_FILE_PATH)))
+        map_url = QUrl.fromLocalFile(resource_path(HTML_FILE_PATH))
+        map_query = QUrlQuery()
+        map_query.addQueryItem('appKey', ROAD_API_SERVICE_KEY)
+        map_url.setQuery(map_query)
+        webView.load(map_url)
 
         # UI Arrangement
         self.layout = QGridLayout()

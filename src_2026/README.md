@@ -111,6 +111,7 @@ python select_window.py
   - `ETRI_OBU_01(RX)_*.csv` (헤더/성능 로그)
 
 ## 9. 참고 사항
+- 지도/교통 및 기상 기능의 인증값은 각각 `TMAP_API_KEY`, `WEATHER_API_SERVICE_KEY` 환경변수로 설정합니다. API 키를 소스에 저장하지 마십시오.
 - 코드 상 기본 연결 IP:
   - 송신: `192.168.1.11`
   - 수신: `192.168.1.11`

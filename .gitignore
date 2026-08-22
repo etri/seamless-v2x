@@ -1,0 +1,17 @@
+.DS_Store
+.idea/
+.vscode/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+.env
+
+# Runtime output
+*.log
+*.eps
+*_Heatmap_*.pdf
+*_dual_axis_*.pdf
+prediction_results_z*.csv
+naiveprediction_results_z*.csv

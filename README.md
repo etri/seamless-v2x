@@ -8,4 +8,12 @@
 #
  ./V2I_실도로 로그
 - ETRI 원내 실도로 수집 데이터 
+
+## 연구 재현용 공개 스냅샷
+
+응용계층 구현부터 버스트 손실 대응 정책, 경량 피드백 예측까지 이어지는 핵심 코드와 가공 데이터는 [`research`](./research)에 정리되어 있습니다.
+
+- [`research/jcci`](./research/jcci): 영상과 고우선순위 안전메시지 통합 송수신 및 HIL 구현
+- [`research/vtc`](./research/vtc): Reed–Solomon 정책 설계공간, LUT 생성과 실측 트레이스 평가
+- [`research/journal`](./research/journal): 경량 인과 예측기를 이용한 적응형 보호 확장
   
