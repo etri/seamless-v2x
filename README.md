@@ -19,9 +19,9 @@
 
 ## 게시자
 
-- 연구 재현용 공개 스냅샷 게시자: [강동원 (@kangdongwon02)](https://github.com/kangdongwon02)
+- 연구 재현용 공개 스냅샷 게시자: [강동원 (@kangdongwon02)](https://github.com/kangdongwon02) · [kamilar0725@snu.ac.kr](mailto:kamilar0725@snu.ac.kr)
 
 ## Publisher
 
-- Research release publisher: [Dongwon Kang (@kangdongwon02)](https://github.com/kangdongwon02).
+- Research release publisher: [Dongwon Kang (@kangdongwon02)](https://github.com/kangdongwon02) · [kamilar0725@snu.ac.kr](mailto:kamilar0725@snu.ac.kr)
   
