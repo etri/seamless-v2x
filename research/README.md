@@ -24,3 +24,32 @@
 여기에는 실행에 필요한 핵심 소스, 가공된 패킷 트레이스, 채널 지표, LUT와 대표 결과만 포함합니다. 논문 원문, 발표자료, 개인 미디어, 행정 문서, 임시 파일과 중복 사본은 포함하지 않습니다. 원시 실도로 로그는 저장소의 기존 [`V2I_실도로 로그`](../V2I_실도로%20로그) 디렉터리를 사용하며 이곳에 복제하지 않습니다.
 
 모든 경로는 각 하위 디렉터리를 현재 작업 디렉터리로 두고 실행하는 것을 기준으로 합니다. 전체 설계공간 생성은 CPU와 메모리를 많이 사용하므로 제공된 CSV/LUT로 평가 파이프라인을 먼저 확인하는 것을 권장합니다.
+
+---
+
+## English
+
+This directory organizes the complete research workflow into three reproducible public snapshots.
+
+| Stage | Directory | Scope |
+|---|---|---|
+| Application and HIL implementation | [`jcci`](./jcci) | Protect high-priority safety messages carried alongside video packets with application-layer Reed–Solomon coding, then validate the implementation in HIL using a measured road-loss trace |
+| Policy design and evaluation | [`vtc`](./vtc) | Generate the design space for RS redundancy `N` and interleaving gap `G` under Gilbert–Elliott burst losses, construct LUTs, and evaluate the resulting policies |
+| Lightweight prediction extension | [`journal`](./journal) | Evaluate adaptive policies driven by a lightweight causal predictor and conservative margins using feedback from the preceding channel state |
+
+### End-to-End Workflow
+
+1. Preserve the existing video traffic while separately identifying the higher-priority BSM/SDSM safety messages.
+2. Encode each safety message at the application layer as GF(256)-based Reed–Solomon symbols.
+3. Select the redundancy level `N` and transmission gap `G` for the current burst-loss environment.
+4. Recover the original message once the receiver has collected enough symbols.
+5. Validate the transmitter and receiver in HIL by replaying packet-success and packet-loss observations collected on the road.
+6. During practical operation, use feedback from the preceding interval to predict the next interval with a lightweight estimator and select the corresponding LUT entry.
+
+A 30 kHz subcarrier spacing in 5G NR provides a 0.5 ms slot. This shorter scheduling unit enables fine-grained placement of redundant symbols over time. The design-space simulators in this release model transmission timing using the 0.5 ms slot.
+
+### Public Release Scope
+
+This release contains only the core source code, processed packet traces, channel metrics, LUTs, and representative results required to run the workflow. Paper manuscripts, presentation slides, personal media, administrative documents, temporary files, and duplicate copies are excluded. The original road logs already available in [`V2I_실도로 로그`](../V2I_실도로%20로그) are not duplicated here.
+
+Run each command with its corresponding subdirectory as the current working directory. Full design-space generation is CPU- and memory-intensive; first validate the evaluation pipeline with the provided CSV and LUT files.

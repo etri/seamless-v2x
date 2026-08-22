@@ -21,6 +21,27 @@
 
 - 연구 재현용 공개 스냅샷 게시자: [강동원 (@kangdongwon02)](https://github.com/kangdongwon02) · [kamilar0725@snu.ac.kr](mailto:kamilar0725@snu.ac.kr)
 
+---
+
+# English
+
+This repository was established with support from the project "Development of Autonomous Cooperative Driving Technology Based on Heterogeneous V2X Seamless Communications for Autonomous Driving," administered by the Ministry of Science and ICT of the Republic of Korea.
+
+The 2026 ETRI public software deliverables are available in [`src_2026`](./src_2026):
+
+- Application software that integrates and transmits video data and safety messages such as BSM and SDSM through V2X communication devices
+- An algorithm designed to maintain reliable message reception as network performance varies from 100% to 40%
+
+The [`V2I_실도로 로그`](./V2I_실도로%20로그) directory contains on-road data collected at the ETRI campus.
+
+## Reproducible Research Snapshots
+
+Core code and processed data covering the complete workflow—from the application-layer implementation to burst-loss protection and lightweight feedback prediction—are organized under [`research`](./research).
+
+- [`research/jcci`](./research/jcci): Integrated video and high-priority safety-message transmission with HIL implementation
+- [`research/vtc`](./research/vtc): Reed–Solomon design-space exploration, LUT generation, and measured-trace evaluation
+- [`research/journal`](./research/journal): Adaptive protection using a lightweight causal predictor
+
 ## Publisher
 
 - Research release publisher: [Dongwon Kang (@kangdongwon02)](https://github.com/kangdongwon02) · [kamilar0725@snu.ac.kr](mailto:kamilar0725@snu.ac.kr)
