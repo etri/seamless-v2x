@@ -1,0 +1,14 @@
+fastcrc
+haversine
+matplotlib
+ntplib
+numpy
+opencv-python
+pandas
+psutil
+pygrabber
+PyQt5
+PyQtWebEngine
+requests
+scapy
+screeninfo
