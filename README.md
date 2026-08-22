@@ -16,4 +16,14 @@
 - [`research/jcci`](./research/jcci): 영상과 고우선순위 안전메시지 통합 송수신 및 HIL 구현
 - [`research/vtc`](./research/vtc): Reed–Solomon 정책 설계공간, LUT 생성과 실측 트레이스 평가
 - [`research/journal`](./research/journal): 경량 인과 예측기를 이용한 적응형 보호 확장
+
+## 코드 작성자
+
+- `research/vtc` 및 `research/journal` 코드 작성: [강동원 (@kangdongwon02)](https://github.com/kangdongwon02)
+- `research/jcci/hil_sender_bsm.py` 및 `research/jcci/hil_sender_sdsm.py` HIL 실험 코드 작성: [강동원 (@kangdongwon02)](https://github.com/kangdongwon02)
+
+## Code Author
+
+- Code in `research/vtc` and `research/journal` was written by [Dongwon Kang (@kangdongwon02)](https://github.com/kangdongwon02).
+- The HIL experiment code in `research/jcci/hil_sender_bsm.py` and `research/jcci/hil_sender_sdsm.py` was written by [Dongwon Kang (@kangdongwon02)](https://github.com/kangdongwon02).
   
