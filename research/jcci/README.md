@@ -47,3 +47,55 @@ $env:WEATHER_API_SERVICE_KEY="your-key"
 ```
 
 기본 대상 IP는 코드에 예시값으로 들어 있으며 UI에서 실제 장비 주소로 변경해야 합니다. 실험 실행 시 생성되는 로그는 공개 스냅샷에 포함하지 않습니다.
+
+---
+
+## English
+
+### Purpose
+
+The V2X application carries video and safety messages together. Although video is important, BSM/SDSM safety messages such as collision warnings and vehicle-state information require higher priority and stronger recovery reliability. This implementation preserves the existing video-packet flow while splitting and protecting only the safety messages as GF(256)-based Reed–Solomon symbols.
+
+The sender divides a safety message into `K` source symbols, generates a total of `N` symbols according to the environment, and carries them in video packets. Once the receiver obtains any `K` independent symbols, it recovers the message through Gaussian elimination. During consecutive loss intervals, spacing the symbols prevents a single burst from eliminating every recovery opportunity.
+
+### Contents
+
+- `select_window.py`: GUI entry point
+- `sender_window.py`: Video transmission and RS encoding of 56-byte safety messages
+- `receiver_window.py`: Video reception, RS decoding, and status display
+- `packet_header_struct.py`: TLVC/SSOV packet structures
+- `hil_sender_bsm.py`: HIL sender for 56-byte BSMs
+- `hil_sender_sdsm.py`: HIL sender for 513-byte SDSMs
+- `trace.bin`: Representative road segment stored as packed packet-success (1) and packet-loss (0) bits
+- `channel_metrics.csv`: PDR and maximum burst length for each 100-packet window
+- `scenario_v2x_56.csv`: GUI transmission scenario
+- `resource/`: GUI maps, icons, and status images
+
+### Runtime Environment
+
+- Windows recommended because the code uses `cv2.CAP_DSHOW` and `pygrabber`
+- Python 3.9–3.11
+- A network interface that can communicate with the transmitting or receiving equipment
+
+```powershell
+python -m venv .venv
+.venv\Scripts\activate
+pip install -r requirements.txt
+python select_window.py
+```
+
+Run the HIL sender that corresponds to the message size:
+
+```powershell
+python hil_sender_bsm.py
+python hil_sender_sdsm.py
+```
+
+For map and weather features, configure API keys through environment variables instead of placing credentials in the source code:
+
+```powershell
+$env:TMAP_API_KEY="your-key"
+$env:WEATHER_API_SERVICE_KEY="your-key"
+```
+
+The source contains an example destination IP. Replace it through the UI with the address of the actual equipment. Runtime logs generated during experiments are not included in this public snapshot.

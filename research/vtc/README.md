@@ -33,3 +33,41 @@ python evaluate_sdsm.py
 ```
 
 Windows PowerShell에서는 가상환경 활성화 명령만 `.venv\Scripts\activate`로 바꾸면 됩니다. 제공된 `trace.bin`, 채널 지표, 설계공간 CSV와 LUT는 결과 재현을 위한 가공 산출물입니다.
+
+---
+
+## English
+
+### Purpose
+
+To maximize the recovery of high-priority safety messages under burst losses, this stage jointly selects the total number of Reed–Solomon symbols `N` and the inter-symbol gap `G`. A 56-byte BSM is modeled with `K=8` 7-byte symbols, while a 513-byte SDSM is modeled with `K=27` 19-byte symbols.
+
+The design-space generators vary the environmental PDR and mean burst length in a Gilbert–Elliott channel and calculate delivery success, latency, and transmitted volume. The model uses a 0.5 ms slot corresponding to a 30 kHz subcarrier spacing and a 100 ms safety-message deadline. The LUT builders enforce a 99% reliability constraint and produce overhead-focused, latency-focused, and balanced policies.
+
+### Files and Execution Order
+
+1. `generate_bsm_design_space.py`, `generate_sdsm_design_space.py`
+   - Generate the full design spaces and save them as `56데이터.csv` and `513데이터.csv`.
+   - These jobs require substantial computation and memory; run them only when regeneration is necessary.
+2. `build_bsm_lut.py`, `build_sdsm_lut.py`
+   - Build three policy LUTs from each design-space CSV.
+3. `build_trace.py`
+   - Generate `trace.bin` and `channel_metrics.csv` from the original road logs already in the repository.
+4. `analyze_bursts.py`
+   - Calculate 100-packet window statistics and LUT-cell occupancy.
+5. `evaluate_bsm.py`, `evaluate_sdsm.py`
+   - Compare RAW, repetition, and adaptive RS policies on the measured trace.
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+
+python build_bsm_lut.py
+python build_sdsm_lut.py
+python analyze_bursts.py trace.bin trace_windows.csv
+python evaluate_bsm.py
+python evaluate_sdsm.py
+```
+
+On Windows PowerShell, replace only the virtual-environment activation command with `.venv\Scripts\activate`. The provided `trace.bin`, channel metrics, design-space CSV files, and LUTs are processed artifacts supplied for reproducibility.

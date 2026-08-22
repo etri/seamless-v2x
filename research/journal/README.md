@@ -32,3 +32,40 @@ python compare_predictors.py
 ```
 
 스크립트는 현재 디렉터리의 CSV/LUT/`trace.bin`을 읽으므로 먼저 이 디렉터리로 이동해 실행하십시오. `results/`에는 공개용 대표 PDF 결과만 포함합니다.
+
+---
+
+## English
+
+### Purpose
+
+In practical operation, a fast and interpretable predictor can be preferable to a large model. This stage causally estimates the next channel interval using feedback from the preceding interval, including PDR, maximum burst length, and vehicle speed. It applies conservative margins to a lightweight EWMA-family estimate and uses the result to query a precomputed Reed–Solomon LUT.
+
+The objective is to preserve enough margin for burst losses when predictions are inaccurate while transmitting fewer redundant bytes than an always-conservative policy. RAW and repetition baselines, a simple one-lag predictor, lightweight predictors, and a non-causal oracle are compared on the same trace.
+
+### Files and Execution Order
+
+1. `generate_predictions.py`
+   - Generate causal prediction CSV files for multiple margins from `channel_metrics_pred.csv`.
+2. `select_margin.py`
+   - Visualize the reliability-and-cost tradeoff among prediction-margin candidates.
+3. `evaluate_predictive_bsm.py`
+   - Compare the proposed prediction with a simple one-lag baseline for 56-byte safety messages.
+4. `evaluate_bsm_modes.py`, `evaluate_sdsm_modes.py`
+   - Evaluate BSM/SDSM delivery reliability and average transmitted bytes for each selected margin.
+5. `compare_predictors.py`
+   - Compare four lightweight prediction results across both BSM and SDSM cases.
+6. `plot_predictions.py`, `plot_zoomed_prediction.py`
+   - Generate prediction time series and zoomed views.
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+
+python generate_predictions.py
+python evaluate_predictive_bsm.py
+python compare_predictors.py
+```
+
+The scripts read CSV files, LUTs, and `trace.bin` from the current directory, so change to this directory before running them. The `results/` directory contains only representative PDF outputs for the public release.
