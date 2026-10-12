@@ -1,0 +1,344 @@
+{
+  "metadata": {
+    "scope": "core Tables V-VII and fixed-LUT carrier-spacing subset of Supplementary Table S4",
+    "prediction_source": "verify",
+    "observation_source": "archived",
+    "profiles": [
+      "BSM",
+      "SDSM"
+    ],
+    "prediction_only": false,
+    "calibration_policy": "archived_execution",
+    "reset_sigma_p": 0.25636107313011797,
+    "reset_sigma_b": 18.88694149782345,
+    "z": {
+      "ARGUS-C": 0.0,
+      "ARGUS-B": 1.0364333894937894,
+      "ARGUS-R": 1.6448536269514715,
+      "ARGUS-E": 2.3263478740408408
+    },
+    "executed_reset_scales": {
+      "A": {
+        "sigma_p": 0.25636107313011797,
+        "sigma_b": 18.88694149782345
+      },
+      "B": {
+        "sigma_p": 0.2564,
+        "sigma_b": 18.89
+      },
+      "C": {
+        "sigma_p": 0.2564,
+        "sigma_b": 18.89
+      }
+    },
+    "prediction_reconstruction": "Original revision generator unavailable; equations plus archival export/precision conventions were reconstructed and checked against all twelve archived mode/trace CSVs.",
+    "replay_prediction_source": "generated",
+    "exported_prediction_source": "generated",
+    "input_sha256": {
+      "A/trace.bin": "893272611a50a82d58e2e3fb55f7cbf4554739a5a206e7bbafb69201eb70e29f",
+      "A/prediction_results_argus_c.csv": "ff6c1e37cedc3adcc6a3d08b459dac382f06098833634a5f73b725095989045b",
+      "A/prediction_results_argus_b.csv": "11ba684be69333db71fbea749ab6f209f68864a76e23f5ec77c2283dc4f0d737",
+      "A/prediction_results_argus_r.csv": "1c27e85c03889ea1063c596319a1e1248299e66893a98a6a38de7f7111fe7fdd",
+      "A/prediction_results_argus_e.csv": "8f91993cb50e325242ab4143cc1f49e0f48305623bbfef00d5e06903ed6234a5",
+      "B/trace.bin": "f022b7c594c28d12ac958fa77a996dc175c2f706a9b8cb10052e6ad7f6269edd",
+      "B/prediction_results_argus_c.csv": "720b5d265d7ed3f74fbc9e8c52b31508d562ca95672f550d9645a25251daa6a7",
+      "B/prediction_results_argus_b.csv": "552ae489c53a49e0a6389c2447a513eed392a5b5a8caed679c31b8a6118ec6cd",
+      "B/prediction_results_argus_r.csv": "ccbb4202de2fa31ca2a951ff4957a571a80f899d04506b2090e802e38947b1e6",
+      "B/prediction_results_argus_e.csv": "97b7438f0e0d90165042f83d09a30d14899c66f00e0740e530db6899a4978ae3",
+      "C/trace.bin": "6c17e7b3bcd19519071b865d75495c13e31854d700cf3a7467bbbcfbc01368fc",
+      "C/prediction_results_argus_c.csv": "fb81da5eff0c78112ab58e59934f8140eb1c9f1ef1ea68ba43e4b927f76f9622",
+      "C/prediction_results_argus_b.csv": "03f1870bd43f9d188b9cb8d1a6dcf0d0bf1a98064b15f1e9a4f985f35d9f8d8c",
+      "C/prediction_results_argus_r.csv": "fb581a6cdd1a2a72b6c457925d1904106bb0d6704c32f94067999326c832b184",
+      "C/prediction_results_argus_e.csv": "a0691ef1e60ec0ccc061a6dd889864684ba5c4c9e80e1ff0806810c8b882b05c",
+      "lut/56LUT_3_Balanced.csv": "bcf3c0c6589d37f81640ea0de22cffdd66b8f79e9e22d1d6238418a7b637ef74",
+      "lut/513LUT_3_Balanced.csv": "07aeedb739b3cdbc4dbc83bbf5f2f2debe97fbd61429d7f94af322c9da513d81"
+    },
+    "known_execution_details": [
+      "Continuous bounds rounded to four decimals reproduce published coverage; integer-query coverage differs.",
+      "The first five predictions force margin bounds to (0,100); they are excluded only from coverage.",
+      "Archived final observation rows differ from final partial bit windows; archived observations are the default.",
+      "The archived A predictor uses full-precision reset scales; B/C use A-derived scales rounded to 4/2 decimals.",
+      "RAW/REP use whole-message carriers; expansion is source-symbol-equivalent payload cost, not carrier or radio cost.",
+      "Offers and losses are position-indexed; the spacing scenarios are not timestamp-driven field deadline measurements."
+    ],
+    "unreproduced_experiments": [
+      "GE/HMM fits",
+      "emission/gain/grid/feedback sensitivity sweeps",
+      "bootstrap intervals",
+      "codec timing",
+      "device-specific LUT recompilation"
+    ]
+  },
+  "coverage": [
+    {
+      "trace": "A",
+      "scheme": "NAIVE",
+      "bound": "archived_continuous",
+      "evaluated_windows": 2094,
+      "pdr_coverage_pct": 54.10697230181471,
+      "burst_coverage_pct": 69.62750716332378,
+      "joint_coverage_pct": 47.277936962750715
+    },
+    {
+      "trace": "A",
+      "scheme": "NAIVE",
+      "bound": "integer_query",
+      "evaluated_windows": 2094,
+      "pdr_coverage_pct": 54.10697230181471,
+      "burst_coverage_pct": 69.62750716332378,
+      "joint_coverage_pct": 47.277936962750715
+    },
+    {
+      "trace": "A",
+      "scheme": "ARGUS-C",
+      "bound": "archived_continuous",
+      "evaluated_windows": 2094,
+      "pdr_coverage_pct": 80.13371537726839,
+      "burst_coverage_pct": 81.61413562559694,
+      "joint_coverage_pct": 71.96752626552053
+    },
+    {
+      "trace": "A",
+      "scheme": "ARGUS-C",
+      "bound": "integer_query",
+      "evaluated_windows": 2094,
+      "pdr_coverage_pct": 80.13371537726839,
+      "burst_coverage_pct": 93.45749761222541,
+      "joint_coverage_pct": 78.93982808022922
+    },
+    {
+      "trace": "A",
+      "scheme": "ARGUS-B",
+      "bound": "archived_continuous",
+      "evaluated_windows": 2094,
+      "pdr_coverage_pct": 94.12607449856733,
+      "burst_coverage_pct": 94.69914040114614,
+      "joint_coverage_pct": 91.16523400191022
+    },
+    {
+      "trace": "A",
+      "scheme": "ARGUS-B",
+      "bound": "integer_query",
+      "evaluated_windows": 2094,
+      "pdr_coverage_pct": 94.12607449856733,
+      "burst_coverage_pct": 97.46895893027698,
+      "joint_coverage_pct": 93.12320916905445
+    },
+    {
+      "trace": "A",
+      "scheme": "ARGUS-R",
+      "bound": "archived_continuous",
+      "evaluated_windows": 2094,
+      "pdr_coverage_pct": 96.8958930276982,
+      "burst_coverage_pct": 96.56160458452722,
+      "joint_coverage_pct": 95.12893982808023
+    },
+    {
+      "trace": "A",
+      "scheme": "ARGUS-R",
+      "bound": "integer_query",
+      "evaluated_windows": 2094,
+      "pdr_coverage_pct": 96.8958930276982,
+      "burst_coverage_pct": 98.32855778414518,
+      "joint_coverage_pct": 96.37058261700095
+    },
+    {
+      "trace": "A",
+      "scheme": "ARGUS-E",
+      "bound": "archived_continuous",
+      "evaluated_windows": 2094,
+      "pdr_coverage_pct": 98.51957975167144,
+      "burst_coverage_pct": 97.56446991404012,
+      "joint_coverage_pct": 96.75262655205348
+    },
+    {
+      "trace": "A",
+      "scheme": "ARGUS-E",
+      "bound": "integer_query",
+      "evaluated_windows": 2094,
+      "pdr_coverage_pct": 98.51957975167144,
+      "burst_coverage_pct": 98.66284622731614,
+      "joint_coverage_pct": 97.75549188156639
+    },
+    {
+      "trace": "B",
+      "scheme": "NAIVE",
+      "bound": "archived_continuous",
+      "evaluated_windows": 2775,
+      "pdr_coverage_pct": 55.02702702702703,
+      "burst_coverage_pct": 71.06306306306305,
+      "joint_coverage_pct": 50.810810810810814
+    },
+    {
+      "trace": "B",
+      "scheme": "NAIVE",
+      "bound": "integer_query",
+      "evaluated_windows": 2775,
+      "pdr_coverage_pct": 55.02702702702703,
+      "burst_coverage_pct": 71.06306306306305,
+      "joint_coverage_pct": 50.810810810810814
+    },
+    {
+      "trace": "B",
+      "scheme": "ARGUS-C",
+      "bound": "archived_continuous",
+      "evaluated_windows": 2775,
+      "pdr_coverage_pct": 83.13513513513513,
+      "burst_coverage_pct": 83.13513513513513,
+      "joint_coverage_pct": 76.3963963963964
+    },
+    {
+      "trace": "B",
+      "scheme": "ARGUS-C",
+      "bound": "integer_query",
+      "evaluated_windows": 2775,
+      "pdr_coverage_pct": 83.13513513513513,
+      "burst_coverage_pct": 93.76576576576576,
+      "joint_coverage_pct": 82.01801801801801
+    },
+    {
+      "trace": "B",
+      "scheme": "ARGUS-B",
+      "bound": "archived_continuous",
+      "evaluated_windows": 2775,
+      "pdr_coverage_pct": 94.0900900900901,
+      "burst_coverage_pct": 94.84684684684684,
+      "joint_coverage_pct": 91.63963963963964
+    },
+    {
+      "trace": "B",
+      "scheme": "ARGUS-B",
+      "bound": "integer_query",
+      "evaluated_windows": 2775,
+      "pdr_coverage_pct": 94.0900900900901,
+      "burst_coverage_pct": 97.26126126126125,
+      "joint_coverage_pct": 93.22522522522523
+    },
+    {
+      "trace": "B",
+      "scheme": "ARGUS-R",
+      "bound": "archived_continuous",
+      "evaluated_windows": 2775,
+      "pdr_coverage_pct": 96.1081081081081,
+      "burst_coverage_pct": 96.2882882882883,
+      "joint_coverage_pct": 94.01801801801801
+    },
+    {
+      "trace": "B",
+      "scheme": "ARGUS-R",
+      "bound": "integer_query",
+      "evaluated_windows": 2775,
+      "pdr_coverage_pct": 96.1081081081081,
+      "burst_coverage_pct": 98.1981981981982,
+      "joint_coverage_pct": 95.38738738738739
+    },
+    {
+      "trace": "B",
+      "scheme": "ARGUS-E",
+      "bound": "archived_continuous",
+      "evaluated_windows": 2775,
+      "pdr_coverage_pct": 97.87387387387388,
+      "burst_coverage_pct": 97.44144144144144,
+      "joint_coverage_pct": 96.25225225225226
+    },
+    {
+      "trace": "B",
+      "scheme": "ARGUS-E",
+      "bound": "integer_query",
+      "evaluated_windows": 2775,
+      "pdr_coverage_pct": 97.87387387387388,
+      "burst_coverage_pct": 98.37837837837839,
+      "joint_coverage_pct": 97.04504504504504
+    },
+    {
+      "trace": "C",
+      "scheme": "NAIVE",
+      "bound": "archived_continuous",
+      "evaluated_windows": 7490,
+      "pdr_coverage_pct": 57.44993324432577,
+      "burst_coverage_pct": 68.63818424566088,
+      "joint_coverage_pct": 50.96128170894526
+    },
+    {
+      "trace": "C",
+      "scheme": "NAIVE",
+      "bound": "integer_query",
+      "evaluated_windows": 7490,
+      "pdr_coverage_pct": 57.44993324432577,
+      "burst_coverage_pct": 68.63818424566088,
+      "joint_coverage_pct": 50.96128170894526
+    },
+    {
+      "trace": "C",
+      "scheme": "ARGUS-C",
+      "bound": "archived_continuous",
+      "evaluated_windows": 7490,
+      "pdr_coverage_pct": 78.85180240320427,
+      "burst_coverage_pct": 80.04005340453939,
+      "joint_coverage_pct": 71.42857142857143
+    },
+    {
+      "trace": "C",
+      "scheme": "ARGUS-C",
+      "bound": "integer_query",
+      "evaluated_windows": 7490,
+      "pdr_coverage_pct": 78.85180240320427,
+      "burst_coverage_pct": 91.34846461949266,
+      "joint_coverage_pct": 77.35647530040053
+    },
+    {
+      "trace": "C",
+      "scheme": "ARGUS-B",
+      "bound": "archived_continuous",
+      "evaluated_windows": 7490,
+      "pdr_coverage_pct": 94.5260347129506,
+      "burst_coverage_pct": 94.6995994659546,
+      "joint_coverage_pct": 91.69559412550066
+    },
+    {
+      "trace": "C",
+      "scheme": "ARGUS-B",
+      "bound": "integer_query",
+      "evaluated_windows": 7490,
+      "pdr_coverage_pct": 94.5260347129506,
+      "burst_coverage_pct": 97.06275033377837,
+      "joint_coverage_pct": 93.52469959946596
+    },
+    {
+      "trace": "C",
+      "scheme": "ARGUS-R",
+      "bound": "archived_continuous",
+      "evaluated_windows": 7490,
+      "pdr_coverage_pct": 96.96929238985314,
+      "burst_coverage_pct": 96.4218958611482,
+      "joint_coverage_pct": 94.739652870494
+    },
+    {
+      "trace": "C",
+      "scheme": "ARGUS-R",
+      "bound": "integer_query",
+      "evaluated_windows": 7490,
+      "pdr_coverage_pct": 96.96929238985314,
+      "burst_coverage_pct": 97.91722296395193,
+      "joint_coverage_pct": 95.95460614152202
+    },
+    {
+      "trace": "C",
+      "scheme": "ARGUS-E",
+      "bound": "archived_continuous",
+      "evaluated_windows": 7490,
+      "pdr_coverage_pct": 98.18424566088117,
+      "burst_coverage_pct": 97.67690253671563,
+      "joint_coverage_pct": 96.66221628838451
+    },
+    {
+      "trace": "C",
+      "scheme": "ARGUS-E",
+      "bound": "integer_query",
+      "evaluated_windows": 7490,
+      "pdr_coverage_pct": 98.18424566088117,
+      "burst_coverage_pct": 98.58477970627504,
+      "joint_coverage_pct": 97.44993324432578
+    }
+  ]
+}

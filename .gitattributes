@@ -1,0 +1,4 @@
+
+# Preserve archived input bytes and release CSV hashes on every checkout.
+research/journal/revision20261008/**/*.csv -text
+research/journal/revision20261008/**/*.bin binary

@@ -1,0 +1,185 @@
+{
+  "format_version": 1,
+  "scope": "Processed binary receptions, archived prediction inputs, and Balanced LUTs for the 2026-10-08 revision core replay. No raw host/device logs or manuscripts.",
+  "files": {
+    "revision20261008/inputs/A/trace.bin": {
+      "sha256": "893272611a50a82d58e2e3fb55f7cbf4554739a5a206e7bbafb69201eb70e29f",
+      "size_bytes": 26233,
+      "trace": "A"
+    },
+    "revision20261008/inputs/A/prediction_results_argus_c.csv": {
+      "sha256": "ff6c1e37cedc3adcc6a3d08b459dac382f06098833634a5f73b725095989045b",
+      "size_bytes": 43954,
+      "rows": 2099,
+      "trace": "A",
+      "columns": [
+        "PDR",
+        "Max_Burst",
+        "Pred_PDR_cons",
+        "Pred_B_cons"
+      ],
+      "source_sha256": "b0a1e6843d253033f7fa4105eb20595172271ce2554a9c71279ab8b6fb8c96f3"
+    },
+    "revision20261008/inputs/A/prediction_results_argus_b.csv": {
+      "sha256": "11ba684be69333db71fbea749ab6f209f68864a76e23f5ec77c2283dc4f0d737",
+      "size_bytes": 43454,
+      "rows": 2099,
+      "trace": "A",
+      "columns": [
+        "PDR",
+        "Max_Burst",
+        "Pred_PDR_cons",
+        "Pred_B_cons"
+      ],
+      "source_sha256": "e84297029c8da20be1f3317161c46746dc3edaa395dff3465ef706434f0abb48"
+    },
+    "revision20261008/inputs/A/prediction_results_argus_r.csv": {
+      "sha256": "1c27e85c03889ea1063c596319a1e1248299e66893a98a6a38de7f7111fe7fdd",
+      "size_bytes": 43176,
+      "rows": 2099,
+      "trace": "A",
+      "columns": [
+        "PDR",
+        "Max_Burst",
+        "Pred_PDR_cons",
+        "Pred_B_cons"
+      ],
+      "source_sha256": "fccc4d4998375f7cd248b4dca16ce95ef56b4a7d1348c04cc4fb59987e497426"
+    },
+    "revision20261008/inputs/A/prediction_results_argus_e.csv": {
+      "sha256": "8f91993cb50e325242ab4143cc1f49e0f48305623bbfef00d5e06903ed6234a5",
+      "size_bytes": 42976,
+      "rows": 2099,
+      "trace": "A",
+      "columns": [
+        "PDR",
+        "Max_Burst",
+        "Pred_PDR_cons",
+        "Pred_B_cons"
+      ],
+      "source_sha256": "a4a445f34951e1275dfe05aad8f38c0dfce3ef428baf42d83bea6e155cf640f0"
+    },
+    "revision20261008/inputs/B/trace.bin": {
+      "sha256": "f022b7c594c28d12ac958fa77a996dc175c2f706a9b8cb10052e6ad7f6269edd",
+      "size_bytes": 34740,
+      "trace": "B"
+    },
+    "revision20261008/inputs/B/prediction_results_argus_c.csv": {
+      "sha256": "720b5d265d7ed3f74fbc9e8c52b31508d562ca95672f550d9645a25251daa6a7",
+      "size_bytes": 58148,
+      "rows": 2780,
+      "trace": "B",
+      "columns": [
+        "PDR",
+        "Max_Burst",
+        "Pred_PDR_cons",
+        "Pred_B_cons"
+      ],
+      "source_sha256": "7cc7f862da9ca3d601e3d4f679e393282da0c6bd5ed7b3e74a961e024d06c2e7"
+    },
+    "revision20261008/inputs/B/prediction_results_argus_b.csv": {
+      "sha256": "552ae489c53a49e0a6389c2447a513eed392a5b5a8caed679c31b8a6118ec6cd",
+      "size_bytes": 57804,
+      "rows": 2780,
+      "trace": "B",
+      "columns": [
+        "PDR",
+        "Max_Burst",
+        "Pred_PDR_cons",
+        "Pred_B_cons"
+      ],
+      "source_sha256": "2b58866add453e63671f23e3e2bf5c4d08c93bfbf21c15f1dc825e6b8ec784e3"
+    },
+    "revision20261008/inputs/B/prediction_results_argus_r.csv": {
+      "sha256": "ccbb4202de2fa31ca2a951ff4957a571a80f899d04506b2090e802e38947b1e6",
+      "size_bytes": 57587,
+      "rows": 2780,
+      "trace": "B",
+      "columns": [
+        "PDR",
+        "Max_Burst",
+        "Pred_PDR_cons",
+        "Pred_B_cons"
+      ],
+      "source_sha256": "85651ee56d24bf1dcf993042b52762bb8ecfd5fed10d64c17063a46e5bb862bd"
+    },
+    "revision20261008/inputs/B/prediction_results_argus_e.csv": {
+      "sha256": "97b7438f0e0d90165042f83d09a30d14899c66f00e0740e530db6899a4978ae3",
+      "size_bytes": 57340,
+      "rows": 2780,
+      "trace": "B",
+      "columns": [
+        "PDR",
+        "Max_Burst",
+        "Pred_PDR_cons",
+        "Pred_B_cons"
+      ],
+      "source_sha256": "df9f413e633f74811626e3cbd786173529876c5d2d67f0dc28b0e737e63e2342"
+    },
+    "revision20261008/inputs/C/trace.bin": {
+      "sha256": "6c17e7b3bcd19519071b865d75495c13e31854d700cf3a7467bbbcfbc01368fc",
+      "size_bytes": 93678,
+      "trace": "C"
+    },
+    "revision20261008/inputs/C/prediction_results_argus_c.csv": {
+      "sha256": "fb81da5eff0c78112ab58e59934f8140eb1c9f1ef1ea68ba43e4b927f76f9622",
+      "size_bytes": 156749,
+      "rows": 7495,
+      "trace": "C",
+      "columns": [
+        "PDR",
+        "Max_Burst",
+        "Pred_PDR_cons",
+        "Pred_B_cons"
+      ],
+      "source_sha256": "8fb4f2bad4df19d726e741d2faa152af1b461eec67c264ed441d564e7f64c905"
+    },
+    "revision20261008/inputs/C/prediction_results_argus_b.csv": {
+      "sha256": "03f1870bd43f9d188b9cb8d1a6dcf0d0bf1a98064b15f1e9a4f985f35d9f8d8c",
+      "size_bytes": 153468,
+      "rows": 7495,
+      "trace": "C",
+      "columns": [
+        "PDR",
+        "Max_Burst",
+        "Pred_PDR_cons",
+        "Pred_B_cons"
+      ],
+      "source_sha256": "08d918218167d7cfb5d120590999dbe0c524466040e2bae1b585f0ecb43cfebc"
+    },
+    "revision20261008/inputs/C/prediction_results_argus_r.csv": {
+      "sha256": "fb581a6cdd1a2a72b6c457925d1904106bb0d6704c32f94067999326c832b184",
+      "size_bytes": 152655,
+      "rows": 7495,
+      "trace": "C",
+      "columns": [
+        "PDR",
+        "Max_Burst",
+        "Pred_PDR_cons",
+        "Pred_B_cons"
+      ],
+      "source_sha256": "a2c0bf37db70f0498f8127d18ca99f60593130f64032c64cc448a95efdab8ef3"
+    },
+    "revision20261008/inputs/C/prediction_results_argus_e.csv": {
+      "sha256": "a0691ef1e60ec0ccc061a6dd889864684ba5c4c9e80e1ff0806810c8b882b05c",
+      "size_bytes": 152083,
+      "rows": 7495,
+      "trace": "C",
+      "columns": [
+        "PDR",
+        "Max_Burst",
+        "Pred_PDR_cons",
+        "Pred_B_cons"
+      ],
+      "source_sha256": "dbde784bc2e9a42f7fa72f64d4f0fcac84964e6005daa2d75d4e32b52d451ce7"
+    },
+    "revision20261008/inputs/lut/56LUT_3_Balanced.csv": {
+      "sha256": "bcf3c0c6589d37f81640ea0de22cffdd66b8f79e9e22d1d6238418a7b637ef74",
+      "size_bytes": 2957
+    },
+    "revision20261008/inputs/lut/513LUT_3_Balanced.csv": {
+      "sha256": "07aeedb739b3cdbc4dbc83bbf5f2f2debe97fbd61429d7f94af322c9da513d81",
+      "size_bytes": 2921
+    }
+  }
+}

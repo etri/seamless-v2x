@@ -15,3 +15,9 @@ venv/
 *_dual_axis_*.pdf
 prediction_results_z*.csv
 naiveprediction_results_z*.csv
+
+# Separate outputs of journal compatibility entry points
+research/journal/revision20261008/predictions_only/
+research/journal/revision20261008/results_bsm/
+research/journal/revision20261008/results_sdsm/
+research/journal/revision20261008/mode_coverage/

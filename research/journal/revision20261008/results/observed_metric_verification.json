@@ -1,0 +1,51 @@
+[
+  {
+    "trace": "A",
+    "rows": 2099,
+    "different_rows_1based": [
+      2099
+    ],
+    "full_windows_match": true,
+    "final_from_bits": {
+      "Window_ID": 2099.0,
+      "PDR": 0.890625,
+      "Max_Burst": 2.0
+    },
+    "final_archived": {
+      "PDR": 0.92,
+      "Max_Burst": 1.0
+    }
+  },
+  {
+    "trace": "B",
+    "rows": 2780,
+    "different_rows_1based": [],
+    "full_windows_match": true,
+    "final_from_bits": {
+      "Window_ID": 2780.0,
+      "PDR": 1.0,
+      "Max_Burst": 0.0
+    },
+    "final_archived": {
+      "PDR": 1.0,
+      "Max_Burst": 0.0
+    }
+  },
+  {
+    "trace": "C",
+    "rows": 7495,
+    "different_rows_1based": [
+      7495
+    ],
+    "full_windows_match": true,
+    "final_from_bits": {
+      "Window_ID": 7495.0,
+      "PDR": 0.5,
+      "Max_Burst": 7.0
+    },
+    "final_archived": {
+      "PDR": 0.71,
+      "Max_Burst": 2.0
+    }
+  }
+]

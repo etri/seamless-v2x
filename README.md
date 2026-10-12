@@ -15,7 +15,7 @@ The [`V2I_실도로 로그`](./V2I_실도로%20로그) directory contains on-roa
 
 ## Reproducible Research Snapshots
 
-Core code and processed data covering the complete workflow—from the application-layer implementation to burst-loss protection and lightweight feedback prediction—are organized under [`research`](./research).
+Historical implementation/design snapshots and the current causal core replay are organized under [`research`](./research). The [2026-10-08 journal core release](./research/journal) regenerates archived predictions and the manuscript core point estimates with a unified 312-position mask. It does not reproduce every supplementary experiment or certify hardware deadlines.
 
 - [`research/jcci`](./research/jcci): Integrated video and high-priority safety-message transmission with HIL implementation
 - [`research/vtc`](./research/vtc): Reed–Solomon design-space exploration, LUT generation, and measured-trace evaluation
@@ -43,7 +43,7 @@ Core code and processed data covering the complete workflow—from the applicati
 
 ## 연구 재현용 공개 스냅샷
 
-응용계층 구현부터 버스트 손실 대응 정책, 경량 피드백 예측까지 이어지는 핵심 코드와 가공 데이터는 [`research`](./research)에 정리되어 있습니다.
+기존 구현·정책 설계 스냅샷과 최신 인과 제어 재현 코드는 [`research`](./research)에 정리되어 있습니다. [2026-10-08 저널 핵심 재현 코드](./research/journal)는 보관된 예측과 원고의 핵심 점추정 결과를 통일된 312-position 기준으로 재현합니다. 모든 보충 실험이나 실제 하드웨어 deadline을 검증하는 패키지는 아닙니다.
 
 - [`research/jcci`](./research/jcci): 영상과 고우선순위 안전메시지 통합 송수신 및 HIL 구현
 - [`research/vtc`](./research/vtc): Reed–Solomon 정책 설계공간, LUT 생성과 실측 트레이스 평가

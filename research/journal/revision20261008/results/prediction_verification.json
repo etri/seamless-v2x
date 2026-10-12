@@ -1,0 +1,122 @@
+[
+  {
+    "trace": "A",
+    "scheme": "ARGUS-C",
+    "rows": 2099,
+    "match": true,
+    "PDR_max_abs_error": 0.0,
+    "Max_Burst_max_abs_error": 0.0,
+    "Pred_PDR_cons_max_abs_error": 0.0,
+    "Pred_B_cons_max_abs_error": 0.0
+  },
+  {
+    "trace": "A",
+    "scheme": "ARGUS-B",
+    "rows": 2099,
+    "match": true,
+    "PDR_max_abs_error": 0.0,
+    "Max_Burst_max_abs_error": 0.0,
+    "Pred_PDR_cons_max_abs_error": 0.0,
+    "Pred_B_cons_max_abs_error": 0.0
+  },
+  {
+    "trace": "A",
+    "scheme": "ARGUS-R",
+    "rows": 2099,
+    "match": true,
+    "PDR_max_abs_error": 0.0,
+    "Max_Burst_max_abs_error": 0.0,
+    "Pred_PDR_cons_max_abs_error": 0.0,
+    "Pred_B_cons_max_abs_error": 0.0
+  },
+  {
+    "trace": "A",
+    "scheme": "ARGUS-E",
+    "rows": 2099,
+    "match": true,
+    "PDR_max_abs_error": 0.0,
+    "Max_Burst_max_abs_error": 0.0,
+    "Pred_PDR_cons_max_abs_error": 0.0,
+    "Pred_B_cons_max_abs_error": 0.0
+  },
+  {
+    "trace": "B",
+    "scheme": "ARGUS-C",
+    "rows": 2780,
+    "match": true,
+    "PDR_max_abs_error": 0.0,
+    "Max_Burst_max_abs_error": 0.0,
+    "Pred_PDR_cons_max_abs_error": 0.0,
+    "Pred_B_cons_max_abs_error": 0.0
+  },
+  {
+    "trace": "B",
+    "scheme": "ARGUS-B",
+    "rows": 2780,
+    "match": true,
+    "PDR_max_abs_error": 0.0,
+    "Max_Burst_max_abs_error": 0.0,
+    "Pred_PDR_cons_max_abs_error": 0.0,
+    "Pred_B_cons_max_abs_error": 0.0
+  },
+  {
+    "trace": "B",
+    "scheme": "ARGUS-R",
+    "rows": 2780,
+    "match": true,
+    "PDR_max_abs_error": 0.0,
+    "Max_Burst_max_abs_error": 0.0,
+    "Pred_PDR_cons_max_abs_error": 0.0,
+    "Pred_B_cons_max_abs_error": 0.0
+  },
+  {
+    "trace": "B",
+    "scheme": "ARGUS-E",
+    "rows": 2780,
+    "match": true,
+    "PDR_max_abs_error": 0.0,
+    "Max_Burst_max_abs_error": 0.0,
+    "Pred_PDR_cons_max_abs_error": 0.0,
+    "Pred_B_cons_max_abs_error": 0.0
+  },
+  {
+    "trace": "C",
+    "scheme": "ARGUS-C",
+    "rows": 7495,
+    "match": true,
+    "PDR_max_abs_error": 0.0,
+    "Max_Burst_max_abs_error": 0.0,
+    "Pred_PDR_cons_max_abs_error": 0.0,
+    "Pred_B_cons_max_abs_error": 0.0
+  },
+  {
+    "trace": "C",
+    "scheme": "ARGUS-B",
+    "rows": 7495,
+    "match": true,
+    "PDR_max_abs_error": 0.0,
+    "Max_Burst_max_abs_error": 0.0,
+    "Pred_PDR_cons_max_abs_error": 0.0,
+    "Pred_B_cons_max_abs_error": 0.0
+  },
+  {
+    "trace": "C",
+    "scheme": "ARGUS-R",
+    "rows": 7495,
+    "match": true,
+    "PDR_max_abs_error": 0.0,
+    "Max_Burst_max_abs_error": 0.0,
+    "Pred_PDR_cons_max_abs_error": 0.0,
+    "Pred_B_cons_max_abs_error": 0.0
+  },
+  {
+    "trace": "C",
+    "scheme": "ARGUS-E",
+    "rows": 7495,
+    "match": true,
+    "PDR_max_abs_error": 0.0,
+    "Max_Burst_max_abs_error": 0.0,
+    "Pred_PDR_cons_max_abs_error": 0.0,
+    "Pred_B_cons_max_abs_error": 0.0
+  }
+]

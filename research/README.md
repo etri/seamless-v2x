@@ -4,15 +4,15 @@
 
 ## English
 
-This directory organizes the complete research workflow into three reproducible public snapshots.
+This directory separates historical application/design snapshots from the current journal core replay. The [2026-10-08 journal release](./journal) covers regenerated predictions, Tables V–VII point estimates/accounting, and a fixed-LUT carrier-spacing sensitivity subset. It does not recreate every supplementary analysis or provide new HIL validation.
 
 | Stage | Directory | Scope |
 |---|---|---|
 | Application and HIL implementation | [`jcci`](./jcci) | Protect high-priority safety messages carried alongside video packets with application-layer Reed–Solomon coding, then validate the implementation in HIL using a measured road-loss trace |
 | Policy design and evaluation | [`vtc`](./vtc) | Generate the design space for RS redundancy `N` and interleaving gap `G` under Gilbert–Elliott burst losses, construct LUTs, and evaluate the resulting policies |
-| Lightweight prediction extension | [`journal`](./journal) | Evaluate adaptive policies driven by a lightweight causal predictor and conservative margins using feedback from the preceding channel state |
+| Lightweight prediction extension | [`journal`](./journal) | Reproduce the current asymmetric-EWMA core replay, conditional/all-offered accounting, and uniform carrier-spacing scenarios |
 
-### End-to-End Workflow
+### Historical implementation workflow
 
 1. Preserve the existing video traffic while separately identifying the higher-priority BSM/SDSM safety messages.
 2. Encode each safety message at the application layer as GF(256)-based Reed–Solomon symbols.
@@ -35,15 +35,15 @@ Run each command with its corresponding subdirectory as the current working dire
 
 ## 한글 버전
 
-이 디렉터리는 하나의 연구 흐름을 세 단계의 재현 가능한 공개 산출물로 정리합니다.
+이 디렉터리는 기존 응용·정책 설계 스냅샷과 현재 저널 핵심 재현 코드를 구분합니다. [2026-10-08 저널 코드](./journal)는 예측 재생성, 표 V–VII의 점추정·회계와 고정 LUT carrier 간격 민감도 일부를 재현합니다. 모든 보충 분석이나 신규 HIL 검증을 제공하지는 않습니다.
 
 | 단계 | 디렉터리 | 핵심 내용 |
 |---|---|---|
 | 응용·HIL 구현 | [`jcci`](./jcci) | 영상 패킷과 함께 전달되는 고우선순위 안전메시지를 응용계층 Reed–Solomon 부호로 보호하고, 실도로 손실 트레이스로 HIL 검증 |
 | 정책 설계·평가 | [`vtc`](./vtc) | Gilbert–Elliott 버스트 손실 환경에서 RS 중복도 `N`과 인터리빙 간격 `G`의 설계공간 생성, LUT 구성 및 평가 |
-| 경량 예측 확장 | [`journal`](./journal) | 직전 채널 상태를 피드백받는 가벼운 인과 예측기와 보수적 마진을 이용한 적응 정책 평가 |
+| 경량 예측 확장 | [`journal`](./journal) | 현재 비대칭 EWMA 예측, conditional/all-offered 회계 및 균일 carrier 간격 조건의 핵심 재현 |
 
-## 전체 흐름
+## 기존 구현 흐름
 
 1. 기존 영상 트래픽은 유지하되, 한층 더 중요한 BSM/SDSM 안전메시지를 별도로 식별합니다.
 2. 안전메시지를 GF(256) 기반 Reed–Solomon 심볼로 나누어 응용계층에서 인코딩합니다.
